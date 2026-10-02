@@ -8,11 +8,13 @@ if (!token) {
   process.exit(1);
 }
 
+const cleanEnv = (val) => (val || '').replace(/['"]/g, '').trim();
+
 const client = createClient({
-  projectId: (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '').trim(),
-  dataset: (process.env.NEXT_PUBLIC_SANITY_DATASET || 'production').trim(),
+  projectId: cleanEnv(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID),
+  dataset: cleanEnv(process.env.NEXT_PUBLIC_SANITY_DATASET) || 'production',
   apiVersion: '2024-01-01',
-  token: token.trim(),
+  token: cleanEnv(token),
   useCdn: false,
 });
 
