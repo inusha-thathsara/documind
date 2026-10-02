@@ -51,12 +51,23 @@ async function importArticles() {
   }
 
   const articles = await listRes.json();
-  console.log(`Found ${articles.length} articles on DEV.to. Beginning import to Sanity...\n`);
+  console.log(`Found ${articles.length} articles on DEV.to.`);
+
+  const force = process.argv.includes('--force');
+  const existingIds = new Set(await client.fetch('*[_type == "doc"]._id'));
+  const newArticles = force ? articles : articles.filter(a => !existingIds.has(`devto-${a.id}`));
+
+  if (newArticles.length === 0) {
+    console.log('✓ All DEV.to articles are already synced in Sanity! Nothing to do.');
+    return;
+  }
+
+  console.log(`Found ${newArticles.length} new/updated article(s) to sync. Beginning import...\n`);
 
   let count = 0;
-  for (const item of articles) {
+  for (const item of newArticles) {
     count++;
-    console.log(`[${count}/${articles.length}] Fetching full content for: "${item.title}"...`);
+    console.log(`[${count}/${newArticles.length}] Fetching full content for: "${item.title}"...`);
 
     try {
       const detailRes = await fetch(`https://dev.to/api/articles/${item.id}`, {
