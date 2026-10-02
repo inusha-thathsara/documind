@@ -9,10 +9,10 @@ if (!token) {
 }
 
 const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
+  projectId: (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '').trim(),
+  dataset: (process.env.NEXT_PUBLIC_SANITY_DATASET || 'production').trim(),
   apiVersion: '2024-01-01',
-  token: token,
+  token: token.trim(),
   useCdn: false,
 });
 
