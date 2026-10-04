@@ -7,6 +7,7 @@ import {schemaTypes} from './schemas'
 export default defineConfig({
   name: 'default',
   title: 'DocuMind',
+  basePath: '/studio',
 
   projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'YOUR_PROJECT_ID',
   dataset: process.env.SANITY_STUDIO_DATASET || 'production',

@@ -22,6 +22,9 @@ export default function Navbar() {
         <Link href="/browse" style={{ padding: '0.5rem 1rem', borderRadius: '6px', backgroundColor: 'var(--surface-color-light)', border: '1px solid var(--border-color)', color: 'var(--text-primary)', fontSize: '0.875rem' }}>
           Browse Docs
         </Link>
+        <Link href="/studio" style={{ padding: '0.5rem 1rem', borderRadius: '6px', backgroundColor: 'var(--surface-color-light)', border: '1px solid var(--border-color)', color: 'var(--text-primary)', fontSize: '0.875rem' }}>
+          Studio
+        </Link>
         <a 
           href="https://www.linkedin.com/in/inusha-gunasekara-9996632a5/" 
           target="_blank" 

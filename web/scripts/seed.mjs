@@ -4,7 +4,8 @@ const token = process.env.SANITY_API_TOKEN;
 
 if (!token) {
   console.log('NOTE: To seed automatically via script, add SANITY_API_TOKEN with write access to .env.local.');
-  console.log('Otherwise, you can easily create documents via Sanity Studio UI at http://localhost:3333');
+  const studioLocation = process.env.STUDIO_URL || 'http://localhost:3333/studio';
+  console.log(`Otherwise, you can easily create documents via Sanity Studio UI at ${studioLocation}`);
   process.exit(0);
 }
 
