@@ -31,7 +31,8 @@ Powered by **Next.js 15**, **Sanity CMS Content Lake**, and **Google Gemini AI**
 
 ## Demo
 
-- **Live Web App:** [https://documind-gamma.vercel.app](https://documind-gamma.vercel.app) *(or your deployed Vercel URL)*
+- **Live Web App:** [https://documind.inusha.me](https://documind.inusha.me)
+- **Live Sanity Studio:** [https://documind.inusha.me/studio](https://documind.inusha.me/studio)
 - **GitHub Repository:** [https://github.com/inusha-thathsara/documind](https://github.com/inusha-thathsara/documind)
 - **Sanity Public Query:** `https://j5tvnuy8.api.sanity.io/v2024-01-01/data/query/production?query=*[_type=="doc"]`
 

@@ -3,6 +3,9 @@
 > **An Intelligent Real-Time AI Documentation & Technical Knowledge Agent**  
 > Powered by **Next.js 15**, **Sanity CMS**, and **Google Gemini AI**.
 
+🌐 **Live Application:** [https://documind.inusha.me](https://documind.inusha.me)  
+🛠️ **Sanity Studio (CMS):** [https://documind.inusha.me/studio](https://documind.inusha.me/studio)  
+
 DocuMind transforms static developer documentation and technical publications into an interactive, conversational AI agent. Users can query engineering concepts, architectures, and implementation details using natural language, and receive streaming answers grounded with direct source citations from a structured Sanity Content Lake.
 
 ---
